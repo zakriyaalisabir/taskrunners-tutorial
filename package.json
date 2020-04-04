@@ -1,11 +1,39 @@
 {
-  "name": "webpack-tutorial",
   "version": "1.0.0",
+  "name": "taskrunners-tutorial",
+  "author": "zakriyaalisabir",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "",
+    "gulp":"npx gulp start",
+    "start": "npx nodemon server.js",
+    "prestart": "npm run build",
+    "build": "npx webpack",
+    "build:watch": "npx webpack --watch"
   },
-  "author": "zakriyaalisabir",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "grunt": "^1.1.0",
+    "grunt-nodemon": "^0.4.2",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "html-webpack-plugin": "^4.0.4",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "keywords": [
+    "grunt",
+    "gulp",
+    "webpack",
+    "npm",
+    "nodejs",
+    "es6",
+    "es5"
+  ]
 }
