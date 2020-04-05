@@ -2,10 +2,18 @@ const gulp = require('gulp');
 const webpack = require('webpack');
 const config = require('../webpack.config');
 
-gulp.task('build', function (callback) {
+const callback = () => {
+  console.log('callback');
+};
+
+gulp.task('build', (callback) => {
   return webpack(config, callback);
 });
 
-gulp.task('build:watch', function () {
-  return gulp.watch(['src/public/*.js', 'src/views/*.html', 'build']);
+gulp.task('build:watch', (callback) => {
+  return gulp.watch(
+    ['src/public/*.js', 'src/views/*.html', 'build'],
+    { events: 'all' },
+    callback()
+  );
 });
